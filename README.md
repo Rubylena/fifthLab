@@ -22,7 +22,8 @@ Your solution would be assessed based on:
 The webpage to be replicated:
 
 - [fifthLabFrontend](https://bit.ly/fifthlabfrontend)
-  Instructions:
+
+### Instructions:
 
 1. Replicate the design in the link above and make it as responsive as you can on both desktop
    and mobile screen sizes
@@ -59,4 +60,4 @@ npm install
 npm run dev
 ```
 
-You can now use `http://localhost:5173/` or [fifthLab application]() to view the application.
+You can now use `http://localhost:5173/` or [fifthLab application](https://fifthlab-grace.netlify.app/) to view the application.

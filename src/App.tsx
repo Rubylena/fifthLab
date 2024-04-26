@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import Home from "./app/index";
+import Home from "./app/Home";
 import Error from "./components/Error";
 import "react-loading-skeleton/dist/skeleton.css";
 import "react-toastify/dist/ReactToastify.css";
-import { homeLoader } from "./utils/loaders";
+import { UsersProvider } from "./context/UsersContext";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: homeLoader,
       },
     ],
   },
@@ -21,7 +20,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <UsersProvider>
       <RouterProvider router={router} />
       <ToastContainer
         autoClose={3000}
@@ -33,7 +32,7 @@ function App() {
         rtl={false}
         pauseOnHover
       />
-    </>
+    </UsersProvider>
   );
 }
 

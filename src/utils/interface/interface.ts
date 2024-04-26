@@ -1,6 +1,5 @@
 export interface IUsers {
   cell: string;
-  dob: { date: string; age: number };
   email: string;
   gender: string;
   login: { uuid: string };
@@ -30,4 +29,20 @@ export interface IUsers {
     thumbnail: string;
   };
   registered: { data: string; age: 4 };
+}
+
+export interface IParams {
+  page: number;
+  results: number;
+}
+
+export interface INat {
+  value: string;
+  name: string;
+}
+
+export interface ISelect {
+  selected?: INat;
+  setSelected?: React.Dispatch<React.SetStateAction<INat>>;
+  data: INat[];
 }

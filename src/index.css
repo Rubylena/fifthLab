@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #262A41;
+  color: #fff;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
