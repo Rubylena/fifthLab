@@ -5,6 +5,12 @@ import Toggler from "./Toggle";
 import { UsersContext } from "../../context/UsersContext";
 import { UsersContextType } from "../../utils/types/types";
 import { useDebounce } from "../../hooks/useDebounce";
+// import {
+//   EnvelopeIcon,
+//   PhoneArrowDownLeftIcon,
+// } from "@heroicons/react/24/outline";
+// import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+// import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const ListUsers = () => {
   const { results, getUsersLoading } = useContext(
@@ -50,6 +56,10 @@ const ListUsers = () => {
             ))
           : "No data"}
       </div>
+      {/* <ArrowRightIcon/> */}
+      {/* <ArrowLeftIcon/> */}
+      {/* <EnvelopeIcon />
+      <PhoneArrowDownLeftIcon /> */}
       <UserDetails uuid={userUuid} />
     </div>
   );

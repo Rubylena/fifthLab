@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { UsersContext } from "../../context/UsersContext";
 import { UsersContextType } from "../../utils/types/types";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 const DownloadUsers = () => {
   const { downloadUsers, downloadUsersLoading } = useContext(
@@ -11,15 +12,16 @@ const DownloadUsers = () => {
     <div>
       DownloadUsers
       <button
+        type="button"
+        className="inline-flex items-center gap-x-1.5 rounded-md bg-mainBg px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mainBg"
         onClick={downloadUsers}
-        className="border"
         disabled={downloadUsersLoading}
       >
         <svg
           aria-hidden="true"
-          className={`h-5 w-5 text-gray-400 mr-3 ${
+          className={`h-5 w-5 text-gray-200 mr-3 ${
             downloadUsersLoading ? "animate-spin block" : "hidden"
-          }  dark:text-gray-600 fill-[#1e213b]`}
+          }  fill-gray-500`}
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +35,10 @@ const DownloadUsers = () => {
             fill="currentFill"
           />
         </svg>
-        download
+        {!downloadUsersLoading && (
+          <ArrowDownTrayIcon className="-ml-0.5 h-5 w-5" aria-hidden="true" />
+        )}
+        Download Results
       </button>
     </div>
   );

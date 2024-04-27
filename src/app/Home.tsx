@@ -5,16 +5,18 @@ import Pagination from "../components/Pagination/Pagination";
 
 const Home = () => {
   return (
-    <div className="flex gap-5">
-      <ShowUsers />
+    <div className="flex flex-col md:flex-row gap-5 justify-center md:h-screen p-8 sm:p-10 md:p-14 items-center">
+      <div className="w-full md:w-2/6">
+        <ShowUsers />
+      </div>
 
-      <div className="bg-white round-lg text-gray-900">
+      <main className="bg-white rounded-lg shadow text-gray-900 border w-full md:w-4/6 h-[28rem]">
         <ListUsers />
         <div>
           <DownloadUsers />
           <Pagination />
         </div>
-      </div>
+      </main>
     </div>
   );
 };

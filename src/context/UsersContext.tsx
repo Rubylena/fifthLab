@@ -21,11 +21,11 @@ const UsersProvider: React.FC<{ children: React.ReactNode }> = ({
   const [nat, setNat] = useState<INat>(countries[0]);
   const [getUsersLoading, setGetUsersLoading] = useState(false);
   const [downloadUsersLoading, setDownloadUsersLoading] = useState(false);
-  const exclusions = "exc=dob,id"; // id is always empty
+  const exclusions = "exc=id"; // id is always empty
 
   const getCurrentUser = useCallback(async () => {
     try {
-      const response = await axiosClient.get(`?${exclusions}`);
+      const response = await axiosClient.get(`?${exclusions}&seed=abc`);
 
       if (response?.data?.error) {
         throw new Error();
