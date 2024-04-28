@@ -30,9 +30,14 @@ const ListUsers = () => {
     debouncedSearch === ""
       ? results
       : results?.filter((user) => {
-          return user?.name?.first
-            ?.toLowerCase()
-            .includes(debouncedSearch.toLowerCase());
+          return (
+            user?.name?.first
+              ?.toLowerCase()
+              .includes(debouncedSearch.toLowerCase()) ||
+            user?.name?.last
+              ?.toLowerCase()
+              .includes(debouncedSearch.toLowerCase())
+          );
         });
 
   return (
@@ -116,7 +121,9 @@ const ListUsers = () => {
             ))}
           </div>
         ) : (
-          "No data"
+          <div className="h-full flex justify-center items-center ">
+            No data available
+          </div>
         )}
       </div>
 
@@ -125,7 +132,7 @@ const ListUsers = () => {
         open={openDetails}
         setOpen={setOpenDetails}
       />
-      
+
       <div className="mt-4 flex gap-3 justify-between items-center flex-wrap">
         <DownloadUsers />
         <Pagination />
