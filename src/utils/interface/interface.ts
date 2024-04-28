@@ -3,6 +3,7 @@ export interface IUsers {
   email: string;
   gender: string;
   login: { uuid: string };
+  dob: {age: number}
   location: {
     street: {
       number: number;
@@ -28,7 +29,7 @@ export interface IUsers {
     medium: string;
     thumbnail: string;
   };
-  registered: { data: string; age: 4 };
+  registered: { date: string; age: 4 };
 }
 
 export interface IParams {

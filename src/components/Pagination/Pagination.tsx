@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UsersContext } from "../../context/UsersContext";
 import { UsersContextType } from "../../utils/types/types";
 import { IParams } from "../../utils/interface/interface";
-// import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
 const Pagination = () => {
   const { paginationParams, setPaginationParams } = useContext(
@@ -24,17 +24,18 @@ const Pagination = () => {
   };
 
   return (
-    <div>
+    <div className="flex items-center gap-2">
       <button
         onClick={previousPage}
         disabled={paginationParams.page === 1}
-        className="border disabled:opacity-50"
+        className="bg-mainBg text-white shadow disabled:bg-gray-300 rounded-lg p-2"
       >
-        Previous
+        <ChevronLeftIcon className="h-5 w-5" />
       </button>
-      {/* <ChevronLeftIcon />
-      <ChevronRightIcon /> */}
-      <button onClick={nextPage}>Next</button>
+
+      <button onClick={nextPage} className="bg-mainBg shadow rounded-lg p-2">
+        <ChevronRightIcon className="h-5 w-5 text-white" />
+      </button>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const SearchUsers = ({
   const { nat, setNat } = useContext(UsersContext) as UsersContextType;
 
   return (
-    <div>
+    <div className="flex items-center gap-5 xl:gap-10 flex-wrap xl:flex-nowrap">
       <div className="w-full sm:max-w-xs">
         <label htmlFor="search" className="sr-only">
           Search
@@ -33,7 +33,7 @@ const SearchUsers = ({
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             className="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:outline-none focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-            placeholder="Search"
+            placeholder="Find in list"
             type="search"
           />
         </div>

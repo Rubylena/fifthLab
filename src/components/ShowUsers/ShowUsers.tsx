@@ -33,48 +33,52 @@ const ShowUsers = () => {
         </p>
       </div>
 
-      <div>
-        <div>
-          <button
-            type="button"
-            onClick={returnToBeginning}
-            className="rounded bg-pink-600 p-2 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            <UserGroupIcon className="h-8 w-8" aria-hidden="true" />
-          </button>
-          <p>All users</p>
-        </div>
+      <div className="mt-8">
+        <h3>Show users</h3>
 
-        <div>
-          <button
-            type="button"
-            onClick={() => {
-              returnToBeginning;
-              setGender("male");
-            }}
-            className="rounded bg-cyan-600 p-2 text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            <div>
-              <img src={Male} alt="male" />
-            </div>
-          </button>
-          <p>Male</p>
-        </div>
+        <div className="flex flex-wrap justify-center sm:justify-between gap-8 2xl:gap-14 2xl:justify-normal items-center mt-5">
+          <div>
+            <button
+              type="button"
+              onClick={returnToBeginning}
+              className="rounded-lg bg-pink-500 py-5 px-10 text-white shadow-sm hover:bg-pink-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              <UserGroupIcon className="h-8 w-8" aria-hidden="true" />
+            </button>
+            <p className="text-center">All users</p>
+          </div>
 
-        <div>
-          <button
-            type="button"
-            onClick={() => {
-              returnToBeginning;
-              setGender("female");
-            }}
-            className="rounded bg-violet-600 p-2 text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            <div>
-              <img src={Female} alt="female" />
-            </div>
-          </button>
-          <p>Female</p>
+          <div>
+            <button
+              type="button"
+              onClick={() => {
+                returnToBeginning;
+                setGender("male");
+              }}
+              className="rounded-lg bg-cyan-500 py-5 px-10 text-white shadow-sm hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              <div>
+                <img src={Male} alt="male" />
+              </div>
+            </button>
+            <p className="text-center">Male</p>
+          </div>
+
+          <div>
+            <button
+              type="button"
+              onClick={() => {
+                returnToBeginning;
+                setGender("female");
+              }}
+              className="rounded-lg bg-violet-500 py-5 px-10 text-white shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              <div>
+                <img src={Female} alt="female" />
+              </div>
+            </button>
+            <p className="text-center">Female</p>
+          </div>
         </div>
       </div>
     </div>

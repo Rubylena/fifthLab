@@ -10,10 +10,9 @@ const DownloadUsers = () => {
 
   return (
     <div>
-      DownloadUsers
       <button
         type="button"
-        className="inline-flex items-center gap-x-1.5 rounded-md bg-mainBg px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mainBg"
+        className="inline-flex items-center gap-x-1.5 rounded-md bg-violet-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mainBg"
         onClick={downloadUsers}
         disabled={downloadUsersLoading}
       >

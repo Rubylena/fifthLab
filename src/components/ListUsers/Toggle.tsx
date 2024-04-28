@@ -16,7 +16,7 @@ export default function Toggler({
       checked={enabled}
       onChange={setEnabled}
       className={classNames(
-        enabled ? "bg-mainBg" : "bg-gray-200",
+        enabled ? "bg-cyan-500" : "bg-gray-200",
         "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-2"
       )}
     >
@@ -60,7 +60,7 @@ export default function Toggler({
           aria-hidden="true"
         >
           <svg
-            className="h-3 w-3 text-indigo-600"
+            className="h-3 w-3 text-cyan-600"
             fill="currentColor"
             viewBox="0 0 12 12"
           >
