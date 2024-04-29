@@ -47,7 +47,7 @@ const ListUsers = () => {
         <p className="text-xs">Search by user name and country</p>
         <div
           className="
-      mt-2 flex items-center gap-5 xl:gap-10 flex-wrap xl:flex-nowrap"
+      mt-2 flex items-center gap-5 lg:gap-8 flex-wrap lg:flex-nowrap"
         >
           <SearchUsers
             searchValue={searchValue}
@@ -74,11 +74,11 @@ const ListUsers = () => {
           <div className="flex flex-col gap-3">
             {filteredUsers?.map((user) => (
               <div
-                className="flex justify-between items-end w-full p-4 bg-white border border-gray-200 rounded-lg shadow-md drop-shadow sm:p-8"
+                className="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-end w-full p-4 bg-white border border-gray-200 rounded-lg shadow-md drop-shadow sm:p-8"
                 key={user?.login?.uuid}
                 onClick={() => setUserUuid(user?.login?.uuid)}
               >
-                <div className="flex items-center gap-10">
+                <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-10">
                   <img
                     className="inline-block h-16 w-16 rounded-full border-4 border-cyan-400"
                     src={user?.picture?.thumbnail}
@@ -97,26 +97,32 @@ const ListUsers = () => {
                       </span>
                     </p>
 
-                    <div className="flex justify-between gap-3 items-center mt-4 text-gray-500">
+                    <div className="flex flex-col xl:flex-row xl:justify-between gap-1 text-sm xl:text-base lg:gap-3 xl:items-center mt-4 text-gray-500 break-all">
                       <div className="flex items-center gap-2">
-                        <EnvelopeIcon className="h-5 w-5" />
-                        <p>{user?.email}</p>
+                        <div className="h-5 w-5">
+                          <EnvelopeIcon className="h-5 w-5" />
+                        </div>
+                        <p className="break-words">{user?.email}</p>
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <PhoneArrowDownLeftIcon className="h-5 w-5" />
+                        <div className="h-5 w-5">
+                          <PhoneArrowDownLeftIcon className="h-5 w-5" />
+                        </div>
                         <p>{user?.cell}</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <button
-                  className="py-3 px-5 bg-cyan-400 hover:bg-cyan-300 shadow rounded-lg"
-                  onClick={() => setOpenDetails(true)}
-                >
-                  <ArrowRightIcon className="h-5 w-5 text-white" />
-                </button>
+                <div className="flex justify-end">
+                  <button
+                    className="py-3 px-5 bg-cyan-400 hover:bg-cyan-300 shadow rounded-lg"
+                    onClick={() => setOpenDetails(true)}
+                  >
+                    <ArrowRightIcon className="h-5 w-5 text-white" />
+                  </button>
+                </div>
               </div>
             ))}
           </div>

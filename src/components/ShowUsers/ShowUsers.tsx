@@ -7,9 +7,7 @@ import Male from "../../assets/icons/man.png";
 import Female from "../../assets/icons/girl.png";
 
 const ShowUsers = () => {
-  const { currentUser, setPaginationParams, setGender } = useContext(
-    UsersContext
-  ) as UsersContextType;
+  const { currentUser, setPaginationParams, setGender } = useContext(UsersContext) as UsersContextType;
 
   const returnToBeginning = () => {
     setPaginationParams((prev: IParams) => ({

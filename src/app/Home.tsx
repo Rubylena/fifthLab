@@ -8,9 +8,8 @@ const Home = () => {
         <ShowUsers />
       </div>
 
-      <main className="bg-white rounded-lg shadow text-gray-900 border w-full md:w-8/12 h-[36rem] p-4 sm:p-8">
+      <main className="bg-white rounded-lg shadow text-gray-900 border w-full md:w-8/12 p-4 sm:p-8">
         <ListUsers />
-        
       </main>
     </div>
   );

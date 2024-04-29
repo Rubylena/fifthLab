@@ -2,6 +2,8 @@
 
 Assessment for CWG FifthLab
 
+## [Live Link](https://fifthlab-grace.netlify.app/)
+
 ## Introduction:
 
 - The goal of this assessment is to test your proficiency in frontend development
@@ -51,8 +53,6 @@ The webpage to be replicated:
 ```js
 npm install
 ```
-
-- Before you run the next step, you need to create an .env.local file in your root directory (i.e in the weather folder). The environment variables has been sent with the submission.
 
 - Then run
 

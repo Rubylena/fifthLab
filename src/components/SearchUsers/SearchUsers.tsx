@@ -15,8 +15,8 @@ const SearchUsers = ({
   const { nat, setNat } = useContext(UsersContext) as UsersContextType;
 
   return (
-    <div className="flex items-center gap-5 xl:gap-10 flex-wrap xl:flex-nowrap">
-      <div className="w-full sm:max-w-xs">
+    <div className="flex items-center gap-5 xl:gap-8 flex-wrap xl:flex-nowrap">
+      <div className="w-full ">
         <label htmlFor="search" className="sr-only">
           Search
         </label>
