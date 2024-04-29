@@ -49,7 +49,7 @@ const UserDetails = ({
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <div className="absolute top-0 inset-0 -m-4 sm:-m-8">
+      <div className="absolute top-0 inset-0 overflow-hidden -m-4 sm:-m-8">
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="flex items-center justify-center pt-4 px-4 pb-20">
             <Transition.Child
