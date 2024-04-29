@@ -29,7 +29,7 @@ export interface IUsers {
     medium: string;
     thumbnail: string;
   };
-  registered: { date: string; age: 4 };
+  registered: { date: string; age: number };
 }
 
 export interface IParams {

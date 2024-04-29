@@ -81,7 +81,7 @@ const UserDetails = ({
                 <button
                   onClick={() => setOpen(false)}
                   type="button"
-                  className="inline-flex gap-2 font-medium text-cyan-500 focus:outline-none sm:ml-3 text-sm"
+                  className="gap-2 font-medium text-cyan-500 focus:outline-none sm:ml-3 text-sm"
                 >
                   <ArrowLeftIcon className="h-5 w-5 text-cyan-500" />
                   RESULTS
@@ -105,7 +105,7 @@ const UserDetails = ({
                         {details?.[0]?.location?.postcode}{" "}
                         {details?.[0]?.location?.city}{" "}
                         {details?.[0]?.location?.state}
-                        <span>{details?.[0]?.location?.country}</span>
+                        <span>, {details?.[0]?.location?.country}</span>
                       </p>
                     </div>
 

@@ -14,6 +14,6 @@ describe("App Component", () => {
         <App />
       </UsersProvider>
     );
-    // Expectations can be added here based on your component's rendering
+    expect(<App />).toBeTruthy();
   });
 });
